@@ -125,6 +125,29 @@ h2{font-size:clamp(34px,5vw,60px);font-weight:700;margin-bottom:22px;color:var(-
 .post p{font-size:16px;color:var(--ink)}
 .post small{color:var(--muted);font-size:13px}
 
+/* tour */
+.tour{background:var(--forest);color:#fff;position:relative;overflow:hidden}
+.tour:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 10%,rgba(232,38,28,.35),transparent 45%),radial-gradient(circle at 10% 90%,rgba(253,211,2,.18),transparent 40%)}
+.tour .wrap{position:relative}
+.tour h2{color:#fff}
+.tour .eyebrow{color:var(--lime)}
+.tour .lead{color:rgba(255,255,255,.82)}
+.season{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.season span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600}
+.season span b{color:var(--lime);margin-right:6px}
+.markets{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.market{background:#fff;color:var(--ink);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px;border-top:6px solid var(--red)}
+.market:nth-child(even){border-top-color:var(--lime)}
+.market h3{font-size:26px;color:var(--forest)}
+.market .cities{font-size:15px;color:var(--muted);line-height:1.5}
+.fest{margin-top:auto;background:var(--cream);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.fest small{display:block;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:2px}
+.fest b{display:block;color:var(--forest);font-size:15.5px}
+.market.wide{grid-column:span 2}
+.market.wider{grid-column:span 3}
+@media (max-width:900px){.markets{grid-template-columns:1fr 1fr}.market.wider{grid-column:span 1}}
+@media (max-width:560px){.markets{grid-template-columns:1fr}.market.wide,.market.wider{grid-column:auto}}
+
 /* vip */
 .vip{background:linear-gradient(180deg,var(--cream),var(--paper))}
 .vip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
@@ -190,6 +213,7 @@ footer{background:#101d4f;color:rgba(255,255,255,.6);text-align:center;padding:2
     <li><a href="#why">Why a balloon</a></li>
     <li><a href="#events">Events</a></li>
     <li><a href="#community">Community</a></li>
+    <li><a href="#tour">Tour</a></li>
     <li><a href="#vip">VIP</a></li>
   </ul>
   <a href="#contact" class="btn small">Let's talk</a>
@@ -295,6 +319,68 @@ footer{background:#101d4f;color:rgba(255,255,255,.6);text-align:center;padding:2
   </div>
 </section>
 
+<section class="tour" id="tour">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">On tour</div>
+      <h2>Fly it in every Honey Bucket market.</h2>
+      <p class="lead">Honey Bucket serves seven states. The balloon can follow you there: community flights over the cities you work in, glows at your events, and a spot in the major balloon festivals that already draw huge crowds in your markets.</p>
+      <div class="season">
+        <span><b>June</b>Helen, GA</span>
+        <span><b>June</b>Seattle Glow</span>
+        <span><b>June</b>Tigard, OR</span>
+        <span><b>July</b>Provo, UT</span>
+        <span><b>July</b>Sonoma County, CA</span>
+        <span><b>Aug</b>Albany, OR</span>
+        <span><b>Sept</b>Colorado Springs</span>
+        <span><b>Sept</b>Plano, TX</span>
+      </div>
+    </div>
+    <div class="markets">
+      <div class="market reveal wide">
+        <h3>Washington</h3>
+        <div class="cities">Aberdeen, Bellevue, Bellingham, Bremerton, Mt Vernon, Olympia, Renton, Seattle, Tacoma, Vancouver</div>
+        <div class="fest"><small>Home base</small><b>Seattle Glow at Seattle Center</b>Seattle Ballooning's own glow, 25,000 people on a Sunday night. Plus flights from our base near Enumclaw all season.</div>
+      </div>
+      <div class="market reveal">
+        <h3>Oregon</h3>
+        <div class="cities">Portland, Salem</div>
+        <div class="fest"><small>Festivals nearby</small><b>Tigard Festival of Balloons</b>Portland metro, June. And the Northwest Art &amp; Air Festival in Albany, August.</div>
+      </div>
+      <div class="market reveal">
+        <h3>California</h3>
+        <div class="cities">Sacramento, San Francisco, Fremont, Santa Rosa</div>
+        <div class="fest"><small>Festival nearby</small><b>Sonoma County Hot Air Balloon Classic</b>Windsor, next to Santa Rosa, July.</div>
+      </div>
+      <div class="market reveal wide">
+        <h3>Texas</h3>
+        <div class="cities">Austin, Dallas/Ft. Worth, Houston, Kingsland, San Antonio, San Marcos, Waco</div>
+        <div class="fest"><small>Festival nearby</small><b>Plano Balloon Festival</b>Dallas/Ft. Worth, September. Community flights and glows across your other Texas cities on the same trip.</div>
+      </div>
+      <div class="market reveal">
+        <h3>Utah</h3>
+        <div class="cities">Provo, Ogden, Salt Lake City</div>
+        <div class="fest"><small>Festival nearby</small><b>Freedom Festival Balloon Fest</b>Provo, Fourth of July week.</div>
+      </div>
+      <div class="market reveal">
+        <h3>Colorado</h3>
+        <div class="cities">Denver</div>
+        <div class="fest"><small>Festival nearby</small><b>Labor Day Lift Off</b>Colorado Springs, Labor Day weekend.</div>
+      </div>
+      <div class="market reveal">
+        <h3>Georgia</h3>
+        <div class="cities">Atlanta</div>
+        <div class="fest"><small>Festival nearby</small><b>Helen to the Atlantic Balloon Race</b>Helen, north of Atlanta, early June.</div>
+      </div>
+      <div class="market reveal wider" style="border-top-color:var(--blue)">
+        <h3>Your events</h3>
+        <div class="cities">Fairs, concerts, runs, sports nights and community events you already service.</div>
+        <div class="fest"><small>Anywhere you are</small><b>Branded glows on request</b>We bring the balloon to the events where your units are already on site.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="vip" id="vip">
   <div class="wrap">
     <div class="reveal">
@@ -330,7 +416,7 @@ footer{background:#101d4f;color:rgba(255,255,255,.6);text-align:center;padding:2
     </div>
     <div class="program-grid">
       <div class="tile reveal"><div class="ico">🎨</div><h3>Custom design</h3><p>A Honey Bucket envelope built around your logo, colors and slogan, designed to read clearly in the air and at night.</p></div>
-      <div class="tile reveal"><div class="ico">✨</div><h3>Event glows</h3><p>Glows at festivals, fairs and sports nights across Washington, alongside our fleet, with travel to your other markets.</p></div>
+      <div class="tile reveal"><div class="ico">✨</div><h3>Event glows</h3><p>Glows at festivals, fairs and sports nights in all seven of your states, including the major balloon festivals in your markets.</p></div>
       <div class="tile reveal"><div class="ico">🏔️</div><h3>Community flights</h3><p>Regular flights over the communities you serve, timed for the best light and the most eyes.</p></div>
       <div class="tile reveal"><div class="ico">🥂</div><h3>VIP flights</h3><p>Client and team flights booked on your schedule, with photos to share afterward.</p></div>
     </div>
